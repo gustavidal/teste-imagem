@@ -1,7 +1,6 @@
 'use strict'
 
 import { uploadParaCloudinary } from './cloudinay.js'
-import { uploadParaFreeImageHost } from './freeimage.js'
 
 
 function preview ({target}) {
@@ -11,7 +10,7 @@ function preview ({target}) {
 }
 async function enviarFoto() {
         const input = document.getElementById('preview-input')
-        const linkPublico = await uploadParaFreeImageHost(input.files[0])
+        const linkPublico = await uploadParaCloudinary(input.files[0])
         console.log('Link público da imagem:', linkPublico)
 }
 
